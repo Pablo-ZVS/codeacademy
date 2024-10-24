@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión o Registrarse - Academia de Programación Web</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-toggle">
+            <button id="login-toggle" class="active">Iniciar Sesión</button>
+            <button id="register-toggle">Crear Cuenta</button>
+        </div>
+        
+        <form id="login-form" class="form" action="../sesionactiva/inicio/inicio.html" method="get">
+            <h2>Iniciar Sesión</h2>
+            <div class="input-group">
+                <input type="email" id="login-email" name="email" required>
+                <label for="login-email">Correo Electrónico</label>
+            </div>
+            <div class="input-group">
+                <input type="password" id="login-password" name="password" required>
+                <label for="login-password">Contraseña</label>
+            </div>
+            <button type="submit" class="btn-submit">Ingresar</button>
+            <div class="form-footer">
+                <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+            </div>
+        </form>
+
+        <form id="register-form" class="form hidden">
+            <h2>Crear Cuenta</h2>
+            <div class="input-group">
+                <input type="text" id="register-name" name="name" required>
+                <label for="register-name">Nombres y Apellidos</label>
+            </div>
+            <div class="input-group">
+                <input type="email" id="register-email" name="email" required>
+                <label for="register-email">Correo Electrónico</label>
+            </div>
+            <div class="input-group">
+                <input type="number" id="register-age" name="age" required min="1" max="120">
+                <label for="register-age">Edad</label>
+            </div>
+            <div class="input-group">
+                <input type="date" id="register-birthdate" name="birthdate" required>
+                <label for="register-birthdate">Fecha de Nacimiento</label>
+            </div>
+            <div class="input-group">
+                <input type="password" id="register-password" name="password" required>
+                <label for="register-password">Contraseña</label>
+            </div>
+            <button type="submit" class="btn-submit">Registrarse</button>
+        </form>
+    </div>
+    
+    <script src="login.js"></script>
+</body>
+</html>

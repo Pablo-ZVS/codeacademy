@@ -1,0 +1,351 @@
+:root {
+    --primary-color: #8e44ad;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --background-color: #1a1a2e;
+    --card-background: #16213e;
+    --text-color: #e0e0e0;
+    --light-gray: #2c3e50;
+    --dark-gray: #34495e;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: var(--card-background);
+    padding: 2rem 1rem;
+    position: fixed;
+    overflow-y: auto;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.logo img {
+    max-width: 150px;
+    filter: brightness(0) invert(1);
+}
+
+.nav-menu {
+    list-style: none;
+}
+
+.nav-menu li {
+    margin-bottom: 0.5rem;
+}
+
+.nav-menu a {
+    display: block;
+    padding: 0.8rem 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    background-color: var(--primary-color);
+}
+
+/* Main Content Styles */
+.main-content {
+    flex: 1;
+    margin-left: 250px;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.user-welcome {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.user-avatar {
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+.user-info h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.subscription-badge {
+    background-color: var(--accent-color);
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* Courses Section */
+.courses-section {
+    margin-bottom: 3rem;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.section-header h2 {
+    color: var(--text-color);
+    font-size: 1.5rem;
+}
+
+.view-all {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.course-card {
+    background-color: var(--card-background);
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.course-card img{
+    width: 100px;
+    height: 100px;
+}
+.course-card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.course-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.course-button:hover {
+    background-color: var(--secondary-color);
+}
+.user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-right: 15px;
+    overflow: hidden;
+}
+
+.user-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.user-welcome {
+    display: flex;
+    align-items: center;
+}
+
+.user-info h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: white;
+}
+/* Añadir estos estilos a tu archivo inicio.css existente */
+
+.profile-info {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.profile-status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.profile-status.public {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.profile-status.private {
+    background-color: #f44336;
+    color: white;
+}
+
+.profile-detail {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+    color: white;
+}
+
+.detail-label {
+    font-weight: 500;
+    margin-right: 10px;
+    min-width: 80px;
+}
+
+.detail-value {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.country-flag {
+    width: 24px;
+    height: 18px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+/* Estilos para el avatar */
+.user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #4a90e2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+    overflow: hidden;
+}
+
+.user-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* Añade estos estilos adicionales a tu archivo inicio.css */
+
+.bio-section {
+    flex-direction: column;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.bio-text {
+    font-style: italic;
+    line-height: 1.5;
+    color: #e0e0e0;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.detail-label {
+    font-weight: 500;
+    margin-right: 10px;
+    min-width: 80px;
+    color: #90caf9; /* Color azul claro para las etiquetas */
+}
+
+/* Ajuste para la sección de biografía */
+.bio-section .detail-label {
+    margin-bottom: 5px;
+}
+
+.bio-section .detail-value {
+    padding-left: 10px;
+    border-left: 3px solid rgba(144, 202, 249, 0.5); /* Borde izquierdo decorativo */
+}
+/* Responsive Design */
+@media (max-width: 1400px) {
+    .courses-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 1200px) {
+    .courses-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+    
+    .main-content {
+        margin-left: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .courses-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .dashboard-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+}

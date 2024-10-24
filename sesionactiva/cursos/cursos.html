@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Academy - Cursos</title>
+    <link rel="stylesheet" href="cursos.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="../../pictures/logo home.png" alt="Code Academy">
+        </div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="../inicio/inicio.html">Inicio</a></li>
+                <li><a href="../rutas/rutas.html">Rutas</a></li>
+                <li><a href="cursos.html" class="active">Cursos</a></li>
+                <li><a href="../../sesionactiva/perfil/perfil.html">Perfil</a></li>
+                <li><a href="../../home/home.html">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main class="main-content">
+        <div class="search-section">
+            <div class="search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" placeholder="Buscar cursos..." class="search-input">
+            </div>
+        </div>
+
+        <section class="courses-section">
+            <h1>Nuestros Cursos</h1>
+            
+            <div class="courses-grid">
+                <!-- Python -->
+                <div class="course-card">
+                    <div class="course-header python">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3>Python</h3>
+                        <p>Aprende el lenguaje más versátil</p>
+                        <div class="course-info">
+                            <span><i class="fas fa-clock"></i> 40 horas</span>
+                            <span><i class="fas fa-signal"></i> Todos los niveles</span>
+                        </div>
+                        <button class="enroll-btn">Inscríbete Ahora</button>
+                    </div>
+                </div>
+
+                <!-- JavaScript -->
+                <div class="course-card">
+                    <div class="course-header javascript">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3>JavaScript</h3>
+                        <p>Domina el lenguaje de la web</p>
+                        <div class="course-info">
+                            <span><i class="fas fa-clock"></i> 45 horas</span>
+                            <span><i class="fas fa-signal"></i> Intermedio</span>
+                        </div>
+                        <button class="enroll-btn">Inscríbete Ahora</button>
+                    </div>
+                </div>
+
+                <!-- React -->
+                <div class="course-card">
+                    <div class="course-header react">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3>React</h3>
+                        <p>Construye aplicaciones modernas</p>
+                        <div class="course-info">
+                            <span><i class="fas fa-clock"></i> 35 horas</span>
+                            <span><i class="fas fa-signal"></i> Avanzado</span>
+                        </div>
+                        <button class="enroll-btn">Inscríbete Ahora</button>
+                    </div>
+                </div>
+
+                <!-- Angular -->
+                <div class="course-card">
+                    <div class="course-header angular">
+                        <i class="fab fa-angular"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3>Angular</h3>
+                        <p>Framework empresarial de Google</p>
+                        <div class="course-info">
+                            <span><i class="fas fa-clock"></i> 50 horas</span>
+                            <span><i class="fas fa-signal"></i> Avanzado</span>
+                        </div>
+                        <button class="enroll-btn">Inscríbete Ahora</button>
+                    </div>
+                </div>
+
+                <!-- Node.js -->
+                <div class="course-card">
+                    <div class="course-header nodejs">
+                        <i class="fab fa-node-js"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3>Node.js</h3>
+                        <p>JavaScript en el servidor</p>
+                        <div class="course-info">
+                            <span><i class="fas fa-clock"></i> 30 horas</span>
+                            <span><i class="fas fa-signal"></i> Intermedio</span>
+                        </div>
+                        <button class="enroll-btn">Inscríbete Ahora</button>
+                    </div>
+                </div>
+
+                <!-- HTML & CSS -->
+                <div class="course-card">
+                    <div class="course-header html">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <div class="course-content">
+                        <h3>HTML & CSS</h3>
+                        <p>Fundamentos del desarrollo web</p>
+                        <div class="course-info">
+                            <span><i class="fas fa-clock"></i> 25 horas</span>
+                            <span><i class="fas fa-signal"></i> Principiante</span>
+                        </div>
+                        <button class="enroll-btn">Inscríbete Ahora</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,243 @@
+:root {
+    --primary-color: #8e44ad;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --background-color: #1a1a2e;
+    --card-background: #16213e;
+    --text-color: #e0e0e0;
+    --light-gray: #2c3e50;
+    --dark-gray: #34495e;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: var(--card-background);
+    padding: 2rem 1rem;
+    position: fixed;
+    overflow-y: auto;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.logo img {
+    max-width: 150px;
+    filter: brightness(0) invert(1);
+}
+
+.nav-menu {
+    list-style: none;
+}
+
+.nav-menu li {
+    margin-bottom: 0.5rem;
+}
+
+.nav-menu a {
+    display: block;
+    padding: 0.8rem 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    background-color: var(--primary-color);
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    margin-left: 250px;
+    padding: 2rem;
+}
+
+/* Search Section */
+.search-section {
+    margin-bottom: 2rem;
+}
+
+.search-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.search-input {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3rem;
+    background-color: #111827;
+    border: none;
+    border-radius: 10px;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.search-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(142, 68, 173, 0.2);
+}
+
+.search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-color);
+    opacity: 0.6;
+}
+
+/* Routes Section */
+.routes-section {
+    padding: 1rem 0;
+}
+
+.routes-section h1 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.routes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.route-card {
+    background-color: var(--card-background);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.route-card:hover {
+    transform: translateY(-5px);
+}
+
+.route-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.route-icon i {
+    font-size: 1.25rem;
+    color: var(--white);
+}
+
+.frontend { background-color: #9333ea; }
+.backend { background-color: #3b82f6; }
+.fullstack { background-color: #ef4444; }
+.data-science { background-color: #22c55e; }
+
+.route-content {
+    flex: 1;
+}
+
+.route-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--white);
+}
+
+.route-content p {
+    color: #94a3b8;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.course-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.tag {
+    background-color: #1f2937;
+    color: #94a3b8;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+}
+
+.ver-ruta-btn {
+    background-color: #9333ea;
+    color: var(--white);
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.ver-ruta-btn:hover {
+    background-color: #7e22ce;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .routes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+    
+    .main-content {
+        margin-left: 200px;
+    }
+    
+    .routes-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .sidebar {
+        width: 0;
+        transform: translateX(-100%);
+    }
+    
+    .main-content {
+        margin-left: 0;
+    }
+    
+    .route-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

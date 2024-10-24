@@ -1,0 +1,188 @@
+:root {
+    --primary-color: #8e44ad;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --background-color: #1a1a2e;
+    --card-background: #16213e;
+    --text-color: #e0e0e0;
+    --light-gray: #2c3e50;
+    --dark-gray: #34495e;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.profile-edit-section {
+    max-width: 600px;
+    margin: 2rem auto;
+    background-color: var(--card-background);
+    border-radius: 15px;
+    padding: 2rem;
+}
+
+.profile-edit-section h2, .profile-edit-section h3 {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+.profile-edit-section h2 {
+    font-size: 1.5rem;
+}
+
+.profile-edit-section h3 {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--light-gray);
+    border-radius: 5px;
+    background-color: var(--dark-gray);
+    color: var(--text-color);
+}
+
+.avatar-upload {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.avatar-preview {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+}
+
+.avatar-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.file-input-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.file-input-wrapper .btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.phone-input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.phone-input-group input[type="text"],
+.phone-input-group input[type="tel"] {
+    padding: 0.8rem;
+    border: 1px solid var(--light-gray);
+    border-radius: 5px;
+    background-color: var(--dark-gray);
+    color: var(--text-color);
+}
+
+.phone-input-group input[type="text"] {
+    width: 70px;
+    flex-shrink: 0;
+}
+
+.phone-input-group input[type="tel"] {
+    flex-grow: 1;
+}
+
+.country-display {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+    background-color: var(--dark-gray);
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.country-flag {
+    width: 24px;
+    height: 16px;
+    object-fit: cover;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+.checkbox-group label {
+    display: inline;
+    margin-bottom: 0;
+}
+
+.button-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.save-button, .back-button {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.save-button {
+    background-color: var(--primary-color);
+}
+
+.back-button {
+    background-color: var(--secondary-color);
+}
+
+.save-button:hover, .back-button:hover {
+    opacity: 0.9;
+}

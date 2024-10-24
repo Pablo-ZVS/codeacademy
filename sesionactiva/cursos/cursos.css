@@ -1,0 +1,245 @@
+:root {
+    --primary-color: #8e44ad;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --background-color: #1a1a2e;
+    --card-background: #16213e;
+    --text-color: #e0e0e0;
+    --light-gray: #2c3e50;
+    --dark-gray: #34495e;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: var(--card-background);
+    padding: 2rem 1rem;
+    position: fixed;
+    overflow-y: auto;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.logo img {
+    max-width: 150px;
+    filter: brightness(0) invert(1);
+}
+
+.nav-menu {
+    list-style: none;
+}
+
+.nav-menu li {
+    margin-bottom: 0.5rem;
+}
+
+.nav-menu a {
+    display: block;
+    padding: 0.8rem 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    background-color: var(--primary-color);
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    margin-left: 250px;
+    padding: 2rem;
+}
+
+/* Search Section */
+.search-section {
+    margin-bottom: 2rem;
+}
+
+.search-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.search-input {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3rem;
+    background-color: #111827;
+    border: none;
+    border-radius: 10px;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-color);
+    opacity: 0.6;
+}
+
+/* Courses Section */
+.courses-section {
+    padding: 1rem 0;
+}
+
+.courses-section h1 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.course-card {
+    background-color: var(--card-background);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+}
+
+.course-header {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5em;
+    color: var(--white);
+}
+
+.course-header.python { background-color: #4B8BBE; }
+.course-header.javascript { background-color: #F7DF1E; color: #000; }
+.course-header.react { background-color: #61DAFB; color: #000; }
+.course-header.angular { background-color: #DD0031; }
+.course-header.nodejs { background-color: #68A063; }
+.course-header.html { background-color: #E44D26; }
+.course-header.php { background-color: #777BB3; }
+.course-header.typescript { background-color: #3178C6; }
+.course-header.docker { background-color: #2496ED; }
+
+.course-content {
+    padding: 1.5rem;
+}
+
+.course-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--white);
+}
+
+.course-content p {
+    color: #94a3b8;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.course-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    color: #94a3b8;
+    font-size: 0.85rem;
+}
+
+.course-info span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.enroll-btn {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.enroll-btn:hover {
+    background-color: #9b59b6;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .courses-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+        padding: 2rem 1rem;
+    }
+    
+    .main-content {
+        margin-left: 200px;
+    }
+    
+    .courses-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .sidebar {
+        width: 80px;
+        padding: 1.5rem 0.5rem;
+    }
+
+    .logo img {
+        max-width: 50px;
+    }
+
+    .nav-menu a {
+        padding: 0.8rem;
+        text-align: center;
+    }
+
+    .nav-menu a span {
+        display: none;
+    }
+    
+    .main-content {
+        margin-left: 80px;
+        padding: 1rem;
+    }
+}

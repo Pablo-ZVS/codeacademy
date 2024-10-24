@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito - Code Academy</title>
+    <link rel="stylesheet" href="carrito.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Finalizar Compra</h1>
+        </header>
+
+        <div class="checkout-container">
+            <div class="order-summary">
+                <h2>Resumen del Pedido</h2>
+                <div class="cart-items">
+                    <!-- Los items se insertarán dinámicamente -->
+                </div>
+                <div class="total-section">
+                    <div class="subtotal">
+                        <span>Subtotal:</span>
+                        <span class="subtotal-amount">S/. 0.00</span>
+                    </div>
+                    <div class="total">
+                        <span>Total:</span>
+                        <span class="total-amount">S/. 0.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="payment-section">
+                <h2>Método de Pago</h2>
+                <div class="payment-options">
+                    <div class="payment-option">
+                        <input type="radio" name="payment" id="credit-card" checked>
+                        <label for="credit-card">
+                            <img src="https://cdn-icons-png.flaticon.com/512/179/179457.png" alt="Credit Card">
+                            Tarjeta de Crédito/Débito
+                        </label>
+                    </div>
+                    <div class="payment-option">
+                        <input type="radio" name="payment" id="yape">
+                        <label for="yape">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7tTx07a9nRLlTE1D-MJSv3P5k6BLd058keA&s" alt="Yape">
+                            Yape
+                        </label>
+                    </div>
+                    <div class="payment-option">
+                        <input type="radio" name="payment" id="plin">
+                        <label for="plin">
+                            <img src="https://static.sambafoot.com/pe/apuestas/wp/imagen-destacada-metodos-de-pago-plin.webp" alt="Plin">
+                            Plin
+                        </label>
+                    </div>
+                </div>
+
+                <div class="payment-forms">
+                    <div class="credit-card-form" id="creditCardForm">
+                        <div class="form-group">
+                            <label>Número de Tarjeta</label>
+                            <input type="text" placeholder="1234 5678 9012 3456" maxlength="19">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Fecha de Vencimiento</label>
+                                <input type="text" placeholder="MM/YY" maxlength="5">
+                            </div>
+                            <div class="form-group">
+                                <label>CVV</label>
+                                <input type="text" placeholder="123" maxlength="3">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Nombre en la Tarjeta</label>
+                            <input type="text" placeholder="NOMBRE APELLIDO">
+                        </div>
+                    </div>
+
+                    <div class="mobile-payment-form" id="yapeForm" style="display: none;">
+                        <div class="qr-section">
+                            <img src="../pictures/qr.png.jpg" alt="QR Yape" class="qr-code">
+                            <p>Escanea el código QR con tu app de Yape</p>
+                        </div>
+                    </div>
+
+                    <div class="mobile-payment-form" id="plinForm" style="display: none;">
+                        <div class="qr-section">
+                            <img src="../pictures/qr.png.jpg" alt="QR Plin" class="qr-code">
+                            <p>Escanea el código QR con tu app de Plin</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="pay-button">Pagar Ahora</button>
+            </div>
+        </div>
+    </div>
+    <script src="carrito.js"></script>
+</body>
+</html>
